@@ -1,0 +1,70 @@
+body {
+    height: 100vh;
+    background: #E8E8E8;
+    font-family: 'Poppins', Arial;
+    margin: 0;
+    display: grid;
+    place-content: center;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 62%;
+    background: rgb(224, 224, 224);
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: -7;
+}
+
+.card {
+    width: 30%;
+    margin: 0 auto;
+    min-width: 500px;
+    padding: 3em;
+    cursor: pointer;
+    position: relative;
+}
+
+.card::before, .card::after {
+    content: "";
+    position: absolute;
+    height: 300px;
+    width: 34%;
+    background: white;
+    top: 0;
+    right: 0;
+    z-index: -2;
+}
+h1 {
+    margin: 0;
+}
+
+.card::after {
+    width: 0;
+    background:  #004CFF;
+    left: 0;
+    z-index: -1;
+}
+
+p {
+    clip-path: circle(0% at 100% 0);
+    color: white;
+    font-size: .9em;
+    line-height: 1.6em;
+    margin: 0;
+    padding: 1.5em 0 0 3em;
+    position: relative;
+    transform: translateX(20px);
+}
+
+p::before {
+    content: "";
+    position: absolute;
+    height: 80%;
+    top: 2em;
+    left: 0;
+    width: 5px;
+    background: darkblue;
+}
